@@ -1,29 +1,32 @@
-import './App.css';
+import "./styles/theme.css";
+import "./styles/global.css";
+import { Header } from "./components/Header";
+import { Routes, Route } from "react-router";
+import { CartProvider } from "./service/CartContext";
+import { Cart } from "./components/etapa2/Cart";
+import { ProductList } from "./components/etapa2/ProductList";
+import { Login } from "./components/etapa2/Login";
+import { Signup } from "./components/etapa2/Signup";
+import { Estoque } from "./components/etapa2/Estoque";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+    <>
+    <CartProvider>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<ProductList/>}/>
+        <Route path="/cart" element={<Cart/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/stock" element={<Estoque/>} />
+      </Routes>
+    </CartProvider>
+    </>
+  );
+  }
+  
+  
+
