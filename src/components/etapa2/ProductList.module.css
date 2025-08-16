@@ -9,7 +9,7 @@
     rgba(10, 20, 117, 255) 100%
   );
     font-size: 3rem;
-    color: rgb(255, 0, 255);
+    color: rgb(48, 189, 199);
     min-height: 100vh;
     margin-top: 10rem;
 }
@@ -36,7 +36,7 @@
 .productTitle {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: rgb(162, 0, 255);
+    color: rgb(0, 183, 255);
 }
 
 .productDescription {
@@ -48,7 +48,7 @@
 .productPrice {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: rgb(218, 37, 234);
+    color: rgb(37, 178, 234);
 }
 
 .productButton {
